@@ -1,0 +1,41 @@
+.report {
+  padding: 40px 40px 20px 40px;
+}
+
+.container {
+  width: 515px;
+  margin: 0 auto;
+}
+.title {
+  margin-bottom: 24px;
+  font-family: 'ALS Gorizont Expanded 2.1';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 19px;
+  color: var(--color-text);
+}
+
+.btns {
+  margin-top: 57px;
+  display: flex;
+  gap: 30px;
+}
+
+@media print {
+  /* убираем элементы из печати */
+  .btns {
+    display: none !important;
+  }
+
+  /* Управление разбиением на страницы */
+  .page-break {
+    break-after: page;
+    /* или page-break-after: always; или break-before: page; и т. д. */
+  }
+
+  /* чтобы браузер отображал задний фон (заливку) при печати */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

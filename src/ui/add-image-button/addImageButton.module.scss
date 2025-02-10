@@ -1,0 +1,14 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 227px;
+  height: 216px;
+  background: var(--color-secondary);
+}
+
+.button.disabled {
+  background: var(--color-bg-btn-gray);
+  color: var(--color-text-gray);
+  pointer-events: none;
+}

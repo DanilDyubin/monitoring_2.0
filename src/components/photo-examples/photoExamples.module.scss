@@ -1,0 +1,54 @@
+.photo-examples {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    &-text {
+      font-family: 'ALS Gorizont Expanded 2.1';
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 120%;
+      color: var(--color-text);
+    }
+  }
+
+  &__list {
+    margin-left: 56px;
+    margin-bottom: 24px;
+    &-item {
+      font-family: 'ALS Hauss';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      color: var(--color-text);
+      list-style: disc;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 216px;
+      width: 227px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+      &--icon {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+      }
+    }
+  }
+}

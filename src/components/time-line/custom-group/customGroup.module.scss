@@ -1,0 +1,50 @@
+.custom-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 16px;
+
+  &__values {
+    display: flex;
+
+    &-plan {
+      width: 68px;
+      text-align: center;
+      color: var(--color-text);
+    }
+
+    &-fact {
+      width: 68px;
+      text-align: center;
+      color: var(--color-text);
+    }
+
+    &-progress {
+      width: 110px;
+      text-align: center;
+      color: var(--color-green);
+    }
+
+    &-done {
+      width: 105px;
+      text-align: center;
+      color: var(--color-text);
+    }
+  }
+}
+
+.color {
+  width: 8px;
+  height: 8px;
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

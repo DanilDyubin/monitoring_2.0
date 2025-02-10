@@ -1,0 +1,31 @@
+.custom-sidebar-header {
+  background-color: var(--color-white);
+  font-weight: 400;
+  font-size: 16px;
+  color: #858585;
+  border-top: 1px solid var(--color-bg);
+
+  &__subtitles {
+    display: flex;
+
+    &-plan {
+      width: 68px;
+      text-align: center;
+    }
+
+    &-fact {
+      width: 68px;
+      text-align: center;
+    }
+
+    &-deviation {
+      width: 110px;
+      text-align: center;
+    }
+
+    &-done {
+      width: 105px;
+      text-align: center;
+    }
+  }
+}

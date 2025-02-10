@@ -1,0 +1,33 @@
+.form {
+  margin-bottom: 32px;
+  &__item {
+    flex: 1;
+
+    &-title {
+      font-family: 'ALS Hauss';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      color: var(--color-text-gray);
+    }
+
+    &-data {
+      //   height: 40px;
+      margin-top: 8px;
+      padding: 12px 16px;
+      font-family: 'ALS Hauss';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      color: #131313;
+      background-color: var(--color-secondary); //  поменять на --color-bg
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,153 @@
+.schedule {
+  .title {
+    margin-bottom: 16px;
+    font-family: 'ALS Gorizont Expanded 2.1';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: var(--color-text);
+  }
+
+  .subtitle {
+    display: flex;
+    font-family: 'ALS Hauss';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: var(--color-text-gray);
+    &__stages {
+      width: 101px;
+    }
+
+    &__dates {
+      width: 160px;
+    }
+
+    &__done {
+      width: 96px;
+    }
+
+    &__deviation {
+      width: 101px;
+    }
+  }
+
+  .cells {
+    display: flex;
+    gap: 7px;
+
+    &__cell {
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+
+      &--stages {
+        width: 101px;
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-text);
+      }
+
+      &--dates {
+        width: 160px;
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-text);
+      }
+
+      &--done {
+        width: 96px;
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-text);
+      }
+
+      &--deviation {
+        width: 101px;
+        font-family: 'ALS Hauss';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-green);
+      }
+    }
+  }
+
+  .table {
+    width: 100%;
+
+    &__th {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: 'ALS Hauss';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 130%;
+      color: #858585;
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+    }
+
+    &__col {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      vertical-align: middle;
+      border-top: 2px solid #edf6fa;
+
+      &:nth-child(1) {
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: #131313;
+        text-align: left;
+      }
+      &:nth-child(2) {
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-text);
+      }
+      &:nth-child(3) {
+        width: 96px;
+        font-family: 'ALS Hauss';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-text);
+      }
+      &:nth-child(4) {
+        width: 101px;
+        font-family: 'ALS Hauss';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        color: var(--color-green);
+      }
+    }
+  }
+}
+
+.warning {
+  color: var(--color-warning);
+}

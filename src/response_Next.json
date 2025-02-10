@@ -1,0 +1,320 @@
+{
+  "status": "done",
+  "result": {
+    "byImage": [
+      {
+        "image": "b086f9ca-8de3-43d8-9c21-a7b8b6ee94df",
+        "predicted_image": "85be4cbd-d708-4a01-8fcd-aaa613a7f792",
+        "current_date": 1733097600000,
+        "report": {
+          "id": "9833037b-59d2-4a31-8709-c1ac647ba55e",
+          "stages": [
+            {
+              "id": 1,
+              "name": "01 Земляные работы",
+              "factValue": 100,
+              "color": "#FF0000"
+            },
+            {
+              "id": 2,
+              "name": "02 Шпунтовое ограждение",
+              "factValue": 100,
+              "color": "#00CC96"
+            },
+            {
+              "id": 3,
+              "name": "03 Распорная система",
+              "factValue": 100,
+              "color": "#0000FF"
+            },
+            {
+              "id": 4,
+              "name": "04 Устройство фундамента",
+              "factValue": 100,
+              "color": "#FFFF00"
+            },
+            {
+              "id": 5,
+              "name": "05 Монолит",
+              "factValue": 100,
+              "color": "#00FFFF"
+            },
+            {
+              "id": 6,
+              "name": "06 Кладка",
+              "factValue": 94.41,
+              "color": "#FF6692"
+            },
+            {
+              "id": 7,
+              "name": "07 Теплоизоляция",
+              "factValue": 85.02,
+              "color": "#A500FF"
+            },
+            {
+              "id": 8,
+              "name": "08 Подсистема фасада",
+              "factValue": 85.02,
+              "color": "#00A5FF"
+            },
+            {
+              "id": 9,
+              "name": "09 Облицовка фасада",
+              "factValue": 85.02,
+              "color": "#A5FF00"
+            },
+            {
+              "id": 10,
+              "name": "10 Работы завершены",
+              "factValue": 0,
+              "color": "#00FFA5"
+            },
+            {
+              "id": 11,
+              "name": "Остекление",
+              "factValue": 84.39
+            },
+            {
+              "id": 12,
+              "name": "Благоустройство",
+              "factValue": 50
+            }
+          ]
+        }
+      },
+      {
+        "image": "cd9bd6c2-c98a-4070-bb37-b81ba389fd02",
+        "predicted_image": "6bd1f7c0-0b4c-4921-8865-2299b301d303",
+        "current_date": 1733097600000,
+        "report": {
+          "id": "5cbc0b20-7ce4-4f70-ab3f-fa6a8b3841d1",
+          "stages": [
+            {
+              "id": 1,
+              "name": "01 Земляные работы",
+              "factValue": 100,
+              "color": "#FF0000"
+            },
+            {
+              "id": 2,
+              "name": "02 Шпунтовое ограждение",
+              "factValue": 100,
+              "color": "#00CC96"
+            },
+            {
+              "id": 3,
+              "name": "03 Распорная система",
+              "factValue": 100,
+              "color": "#0000FF"
+            },
+            {
+              "id": 4,
+              "name": "04 Устройство фундамента",
+              "factValue": 100,
+              "color": "#FFFF00"
+            },
+            {
+              "id": 5,
+              "name": "05 Монолит",
+              "factValue": 100,
+              "color": "#00FFFF"
+            },
+            {
+              "id": 6,
+              "name": "06 Кладка",
+              "factValue": 69.32,
+              "color": "#FF6692"
+            },
+            {
+              "id": 7,
+              "name": "07 Теплоизоляция",
+              "factValue": 65.25,
+              "color": "#A500FF"
+            },
+            {
+              "id": 8,
+              "name": "08 Подсистема фасада",
+              "factValue": 65.25,
+              "color": "#00A5FF"
+            },
+            {
+              "id": 9,
+              "name": "09 Облицовка фасада",
+              "factValue": 65.25,
+              "color": "#A5FF00"
+            },
+            {
+              "id": 10,
+              "name": "10 Работы завершены",
+              "factValue": 0.03,
+              "color": "#00FFA5"
+            },
+            {
+              "id": 11,
+              "name": "Остекление",
+              "factValue": 63.94
+            },
+            {
+              "id": 12,
+              "name": "Благоустройство",
+              "factValue": 0
+            }
+          ]
+        }
+      }
+    ],
+    "total": {
+      "id": "65b9b019-9e2d-47e9-a01a-e3587dad67e0",
+      "current_date": 1733097600000,
+      "images": ["b086f9ca-8de3-43d8-9c21-a7b8b6ee94df", "cd9bd6c2-c98a-4070-bb37-b81ba389fd02"],
+      "stages": [
+        {
+          "id": 1,
+          "name": "01 Земляные работы",
+          "factValue": 100,
+          "planValue": 0,
+          "progress_diff": 100,
+          "color": "#FF0000"
+        },
+        {
+          "id": 2,
+          "name": "02 Шпунтовое ограждение",
+          "factValue": 100,
+          "planValue": 0,
+          "progress_diff": 100,
+          "color": "#00CC96"
+        },
+        {
+          "id": 3,
+          "name": "03 Распорная система",
+          "factValue": 100,
+          "planValue": 0,
+          "progress_diff": 100,
+          "color": "#0000FF"
+        },
+        {
+          "id": 4,
+          "name": "04 Устройство фундамента",
+          "factValue": 100,
+          "planValue": 0,
+          "progress_diff": 100,
+          "color": "#FFFF00"
+        },
+        {
+          "id": 5,
+          "name": "05 Монолит",
+          "factValue": 100,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": 75,
+          "color": "#00FFFF"
+        },
+        {
+          "id": 6,
+          "name": "06 Кладка",
+          "factValue": 81.87,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": 56.870000000000005,
+          "color": "#FF6692"
+        },
+        {
+          "id": 7,
+          "name": "07 Теплоизоляция",
+          "factValue": 75.13,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": 50.129999999999995,
+          "color": "#A500FF"
+        },
+        {
+          "id": 8,
+          "name": "08 Подсистема фасада",
+          "factValue": 75.13,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": 50.129999999999995,
+          "color": "#00A5FF"
+        },
+        {
+          "id": 9,
+          "name": "09 Облицовка фасада",
+          "factValue": 75.13,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": 50.129999999999995,
+          "color": "#A5FF00"
+        },
+        {
+          "id": 10,
+          "name": "10 Работы завершены",
+          "factValue": 0.02,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": -24.98,
+          "color": "#00FFA5"
+        },
+        {
+          "id": 11,
+          "name": "Остекление",
+          "factValue": 74.17,
+          "planValue": 25,
+          "plannedStart": 1733011200000,
+          "plannedEnd": 1733356800000,
+          "progress_diff": 49.17
+        },
+        {
+          "id": 12,
+          "name": "Благоустройство",
+          "factValue": 0,
+          "planValue": 0,
+          "progress_diff": 0
+        }
+      ]
+    }
+  },
+  "some": {
+    "dimensions": {
+      "left": 1024.5333333333333,
+      "width": 813.5999996512346,
+      "collisionLeft": 1735506000000,
+      "collisionWidth": 2332799999,
+      "top": 40,
+      "order": {
+        "index": 1,
+        "group": {
+          "id": 1,
+          "title": "Шпунтовое ограждение",
+          "done": 40.74074075820505,
+          "deviation": 0,
+          "height": 40,
+          "progress": false,
+          "color": "#00CC96"
+        }
+      },
+      "stack": true,
+      "height": 30
+    },
+    "useResizeHandle": false,
+    "title": "30.12 — 25.01",
+    "canMove": false,
+    "canResizeLeft": false,
+    "canResizeRight": true,
+    "selected": false,
+    "dragging": null,
+    "dragStart": null,
+    "dragTime": null,
+    "dragGroupDelta": null,
+    "resizing": null,
+    "resizeEdge": null,
+    "resizeStart": null,
+    "resizeTime": null,
+    "width": 813.5999996512346
+  }
+}

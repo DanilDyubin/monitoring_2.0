@@ -1,0 +1,26 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinnerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.spinner {
+    animation: spin 2s linear infinite;
+}
+
+.loadingText {
+    font: var(--font-gorizont-500-28);
+}

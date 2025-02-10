@@ -1,0 +1,47 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 12px 24px;
+  height: 56px;
+  font-family: 'ALS Hauss';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 110%;
+  transition: all 0.2s ease-out;
+}
+
+.btn.small {
+  width: 182px;
+}
+
+.btn.big {
+  width: 100%;
+}
+
+.btn.primary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn.secondaryHovered {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}
+
+.btn.disabled {
+  background-color: var(--color-bg-btn-gray);
+  color: var(--color-text-gray);
+  cursor: not-allowed;
+  pointer-events: none;
+}

@@ -1,0 +1,105 @@
+.images-upload {
+  position: relative;
+  padding: 64px 32px;
+  width: 100%;
+  background: #edf6fa;
+  //   border: 2px dashed var(--color-primary);
+  background-image: repeating-linear-gradient(
+      0deg,
+      var(--color-primary),
+      var(--color-primary) 27px,
+      transparent 27px,
+      transparent 54px,
+      var(--color-primary) 54px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--color-primary),
+      var(--color-primary) 27px,
+      transparent 27px,
+      transparent 54px,
+      var(--color-primary) 54px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      var(--color-primary),
+      var(--color-primary) 27px,
+      transparent 27px,
+      transparent 54px,
+      var(--color-primary) 54px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      var(--color-primary),
+      var(--color-primary) 27px,
+      transparent 27px,
+      transparent 54px,
+      var(--color-primary) 54px
+    );
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+
+  &__overlay {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 100%;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(0.4rem);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--color-text);
+  }
+
+  &__title {
+    // max-width: 606px;
+    font-family: 'ALS Gorizont Expanded 2.1';
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-text);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    width: 182px;
+    height: 56px;
+    margin: 0 auto;
+    background: var(--color-secondary);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 110%;
+    color: var(--color-primary);
+  }
+
+  &__input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  // .hidden {
+  //   opacity: 0;
+  //   height: 0;
+  //   width: 0;
+  //   line-height: 0;
+  //   overflow: hidden;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+}

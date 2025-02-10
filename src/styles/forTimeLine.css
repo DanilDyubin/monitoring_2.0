@@ -1,0 +1,114 @@
+/* .react-calendar-timeline .custom-sidebar-header {
+  background: var(--color-white);
+} */
+
+/* .react-calendar-timeline .rct-sidebar {
+  background: var(--color-white);
+} */
+
+/* .react-calendar-timeline .rct-dateHeader {
+  color: black !important;
+  background-color: var(--color-white) !important; // поменять
+} */
+
+.react-calendar-timeline .rct-outer {
+  background: var(--color-white);
+}
+
+.react-calendar-timeline .rct-sidebar .rct-sidebar-row {
+  padding: 0 !important;
+}
+
+.react-calendar-timeline .rct-item {
+  height: 40px !important;
+  line-height: 40px !important;
+  color: #131313 !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+}
+
+// .react-calendar-timeline .rct-scroll
+
+/* .react-calendar-timeline {
+    .rct-vertical-lines {
+      .rct-vl {
+        &.rct-day-6,
+        &.rct-day-0 {
+          background-color: var(--color-bg);
+        }
+      }
+    }
+  } */
+
+.react-calendar-timeline .rct-vertical-lines .rct-vl.rct-day-6 {
+  background-color: var(--color-white);
+}
+
+.react-calendar-timeline .rct-horizontal-lines .rct-hl-odd {
+  background-color: var(--color-white) !important;
+}
+
+.react-calendar-timeline .rct-sidebar .rct-sidebar-row.rct-sidebar-row-odd {
+  background-color: var(--color-white) !important;
+}
+
+/* .react-calendar-timeline .rct-dateHeader {
+    
+  } */
+
+// lines
+
+.react-calendar-timeline .rct-vertical-lines .rct-vl {
+  border-left: 1px solid var(--color-bg) !important;
+}
+
+.react-calendar-timeline .rct-horizontal-lines .rct-hl-even,
+.react-calendar-timeline .rct-horizontal-lines .rct-hl-odd {
+  border-bottom: 1px solid var(--color-bg) !important;
+}
+
+.react-calendar-timeline .rct-header-root {
+  /* border-bottom: 1px solid var(--color-bg) !important; */
+  border-bottom: 0px;
+}
+
+.react-calendar-timeline .rct-sidebar .rct-sidebar-row {
+  border-bottom: 1px solid var(--color-bg) !important;
+}
+
+.react-calendar-timeline .rct-dateHeader-primary {
+  border-right: 0px !important;
+}
+
+.react-calendar-timeline .rct-sidebar {
+  border-right: 1px solid var(--color-bg) !important;
+}
+
+.react-calendar-timeline .rct-header-root {
+  // самая нижняя линия хедера
+  border-bottom: 1px solid var(--color-bg) !important;
+}
+
+.react-calendar-timeline .rct-dateHeader {
+  // border дней
+  border-top: 1px solid var(--color-bg) !important; // добавляет два бордера (дням и месяца)
+  border-left: 1px solid var(--color-bg) !important;
+  border-bottom: 0px !important;
+}
+
+.react-calendar-timeline .rct-calendar-header {
+  // общий бордер календаря
+  border: 1px solid var(--color-bg) !important;
+  border-bottom: 0px !important;
+  border-top: 0px !important;
+  border-right: 0px !important;
+}
+
+.react-calendar-timeline .rct-vertical-lines .rct-vl.rct-day-6,
+.react-calendar-timeline .rct-vertical-lines .rct-vl.rct-day-0 {
+  background: transparent !important;
+}
+
+.react-calendar-timeline .rct-header-root {
+  margin-left: -1px;
+}

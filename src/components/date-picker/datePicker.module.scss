@@ -1,0 +1,32 @@
+.container {
+  background: #ffffff;
+  box-shadow: 0px 4px 32px rgba(19, 19, 19, 0.08);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 30px 24px;
+  background-color: var(--color-white);
+}
+
+.wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.cancel {
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.clear {
+  cursor: pointer;
+  color: var(--color-warning);
+}
+
+.done {
+  cursor: pointer;
+  color: var(--color-violet);
+}

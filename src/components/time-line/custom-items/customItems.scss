@@ -1,0 +1,56 @@
+// .some {
+//   cursor: pointer;
+//   background: rgb(0, 204, 150);
+//   border: none;
+//   z-index: 80;
+//   position: absolute;
+//   box-sizing: border-box;
+//   left: 898.097px;
+//   top: 40px;
+//   width: 554.065px;
+// }
+
+// .titlesssss {
+//   position: sticky;
+//   left: 0;
+//   overflow: hidden;
+//   display: inline-block;
+//   border-radius: 2px;
+//   padding: 0 6px;
+//   height: 100%;
+// }
+
+.custom-item {
+  position: relative;
+  height: 100%;
+}
+
+.color-done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.rct-item-content {
+  z-index: 10;
+}
+
+.rct-item .item-selected {
+  height: 100%;
+  border: 2px solid var(--color-warning);
+}
+
+.custom-item .item-delete {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: 'ALS Hauss';
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-warning);
+  &--icon {
+    font-size: 20px;
+  }
+}

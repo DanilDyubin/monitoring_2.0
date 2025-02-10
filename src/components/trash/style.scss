@@ -1,0 +1,34 @@
+.timelinecomponent {
+  position: relative;
+}
+
+.todayMarkerLocale::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -7px; /* Положение треугольника */
+  border: 8px solid transparent;
+  border-top: 12px solid var(--color-primary);
+}
+
+// .todayMarkerLocale::after {
+//   content: '';
+//   position: absolute;
+//   left: 2px;
+//   top: 0;
+//   width: 2000px;
+//   height: 100%;
+//   background-color: black;
+//   opacity: 0.3;
+// }
+
+.customMarkerLocale {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px; /* Положение треугольника */
+    border: 8px solid transparent;
+    border-top: 12px solid var(--color-primary);
+  }
+}

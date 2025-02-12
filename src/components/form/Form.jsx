@@ -1,6 +1,12 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
+import {
+  useState,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 import { addCurrentDate } from '../../redux/slices/scheduleSlice';
 import { setFormData } from '../../redux/slices/reportSlice';
 import DatePickerForm from '../date-picker/DatePickerForm';
@@ -25,6 +31,9 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
   } = methods;
 
   const [openCalendar, setOpenCalendar] = useState(false);
+
+  const calendarRef = useRef();
+  console.log(calendarRef);
 
   const dispatch = useDispatch();
 
@@ -98,7 +107,6 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
                   // },
                 })}
                 className={s.inputDate}
-                // placeholder="ДД.ММ.ГГГГ"
                 type="text"
                 // readOnly={true}
                 // onFocus={() => setOpenCalendar(true)}
@@ -118,7 +126,7 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
               )}
             </div>
             {openCalendar && (
-              <div className={s.calendar}>
+              <div className={s.calendar} ref={calendarRef}>
                 <DatePickerForm
                   setOpenCalendar={setOpenCalendar}
                   setCalendarDate={setCalendarDate}

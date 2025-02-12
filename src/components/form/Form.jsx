@@ -1,5 +1,3 @@
-import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
 import {
   useState,
   useEffect,
@@ -7,11 +5,15 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react';
-import { addCurrentDate } from '../../redux/slices/scheduleSlice';
-import { setFormData } from '../../redux/slices/reportSlice';
-import DatePickerForm from '../date-picker/DatePickerForm';
-import { LiaCalendarAlt } from 'react-icons/lia';
+import { useDispatch } from 'react-redux';
+import { useForm } from 'react-hook-form';
 import moment from 'moment';
+import { LiaCalendarAlt } from 'react-icons/lia';
+
+import { addCurrentDate } from '../../redux/slices/scheduleSlice';
+import { useClickOutside } from '../../hooks/useClickOutside';
+
+import DatePickerForm from '../date-picker/DatePickerForm';
 
 import s from './form.module.scss';
 
@@ -25,7 +27,7 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
     register,
     watch,
     reset,
-    resetField,
+    trigger,
     setValue,
     formState: { errors, isValid },
   } = methods;
@@ -33,7 +35,6 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
   const [openCalendar, setOpenCalendar] = useState(false);
 
   const calendarRef = useRef();
-  console.log(calendarRef);
 
   const dispatch = useDispatch();
 
@@ -52,6 +53,16 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
       shouldValidate: true,
     });
     dispatch(addCurrentDate(moment(calendarDate, 'DD.MM.YYYY').valueOf()));
+  };
+
+  useClickOutside(calendarRef, () => setOpenCalendar(false)); // закрываем календарь по клику вне его области
+
+  const handleInputsValidate = (e) => {
+    // запускает валидацию инпута date по клику на Enter
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      trigger('date');
+    }
   };
 
   // const onSubmit = (data) => {
@@ -77,7 +88,11 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
               {errors?.uin && <p className={s['error__txt']}>Укажите УИН</p>}
             </div>
           </div>
-          <div className={s.field + ` ` + s.relative}>
+          <div
+            className={s.field + ` ` + s.relative}
+            ref={calendarRef}
+            onKeyDown={handleInputsValidate}
+          >
             <label className={s.label} htmlFor="date">
               Дата съемки *
             </label>
@@ -115,7 +130,7 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
               />
               <LiaCalendarAlt
                 className={s.icon}
-                onClick={() => setOpenCalendar(true)}
+                onClick={() => setOpenCalendar(!openCalendar)}
               />
             </div>
             <div>
@@ -126,7 +141,7 @@ const Form = forwardRef(({ onFormValideChange }, ref) => {
               )}
             </div>
             {openCalendar && (
-              <div className={s.calendar} ref={calendarRef}>
+              <div className={s.calendar}>
                 <DatePickerForm
                   setOpenCalendar={setOpenCalendar}
                   setCalendarDate={setCalendarDate}

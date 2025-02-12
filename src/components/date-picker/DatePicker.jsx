@@ -7,7 +7,7 @@ import moment from 'moment';
 import { DayPicker } from 'react-day-picker';
 import { ru } from 'react-day-picker/locale';
 import 'react-day-picker/style.css';
-import '../../styles/datePicker.css';
+// import '../../styles/datePicker.css';
 import s from './datePicker.module.scss';
 
 const DatePicker = () => {
@@ -49,7 +49,9 @@ const DatePicker = () => {
         color: group.color,
         color_light: group.color_light,
         current_date: currentDate,
-        title: `${moment(selected.from).format('DD.MM')} — ${moment(selected.to).format('DD.MM')}`,
+        title: `${moment(selected.from).format('DD.MM')} — ${moment(
+          selected.to
+        ).format('DD.MM')}`,
         start_time: moment(selected.from).valueOf(),
         end_time: moment(selected.to).endOf('day').valueOf(), // endOf('day') устанавливаем время в конце дня на 23:59 чтобы выбранный день в item был подностью закрашен
         itemProps: {
@@ -79,7 +81,11 @@ const DatePicker = () => {
             Очистить
           </div>
         </div>
-        <div className={s.done} onClick={handleAddItem} disabled={!isDateSelected}>
+        <div
+          className={s.done}
+          onClick={handleAddItem}
+          disabled={!isDateSelected}
+        >
           Готово
         </div>
       </div>

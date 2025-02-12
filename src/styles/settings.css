@@ -49,3 +49,10 @@ button {
   cursor: pointer;
   padding: 0;
 }
+
+/* убираем цвет автозаполнения в браузерах */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #f2fbff inset !important;
+  background-color: #f2fbff !important;
+  -webkit-text-fill-color: #131313;
+}

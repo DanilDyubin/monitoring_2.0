@@ -146,7 +146,7 @@ export const CustomItemTotalPage = ({
   getResizeProps,
   timelineContext,
 }) => {
-  const { left: leftResizeProps, right: rightResizeProps } = getResizeProps();
+  // const { left: leftResizeProps, right: rightResizeProps } = getResizeProps();
 
   const canvasStartTime = timelineContext.canvasTimeStart; // Таймштамп начала канваса
   const canvasEndTime = timelineContext.canvasTimeEnd; // Таймштамп окончания канваса
@@ -174,7 +174,7 @@ export const CustomItemTotalPage = ({
 
   return (
     <div {...getItemProps(item.itemProps)}>
-      {itemContext.useResizeHandle ? <div {...leftResizeProps} /> : ''}
+      {/* {itemContext.useResizeHandle ? <div {...leftResizeProps} /> : ''} */}
 
       <div className="custom-item">
         <div
@@ -188,7 +188,7 @@ export const CustomItemTotalPage = ({
         </div>
       </div>
 
-      {itemContext.useResizeHandle ? <div {...rightResizeProps} /> : ''}
+      {/* {itemContext.useResizeHandle ? <div {...rightResizeProps} /> : ''} */}
     </div>
   );
 };

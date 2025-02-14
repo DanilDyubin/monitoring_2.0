@@ -82,7 +82,8 @@
 }
 
 .input.error,
-.inputContainer.error .textarea.error {
+.inputContainer.error,
+.textarea.error {
   border: 1px solid var(--color-warning);
 }
 

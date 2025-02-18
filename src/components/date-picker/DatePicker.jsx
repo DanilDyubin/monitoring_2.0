@@ -6,35 +6,54 @@ import moment from 'moment';
 
 import { DayPicker } from 'react-day-picker';
 import { ru } from 'react-day-picker/locale';
+import Footer from './calendar-footer/CalendarFooter';
+
 import 'react-day-picker/style.css';
 // import '../../styles/datePicker.css';
 import s from './datePicker.module.scss';
 
 const DatePicker = () => {
+  const [selected, setSelected] = useState();
+  const [inputValue, setInputValue] = useState({ from: '', to: '' }); // выбор даты в input
+
   const currentDate = useSelector((state) => state.schedule.currentDate); // получаем дату съемки
   const groups = useSelector((state) => state.schedule.groups);
   const groupId = useSelector((state) => state.calendar.groupId); // получаем id группы для которой ввели даты на таймлайне
-  const [selected, setSelected] = useState();
-
-  // const initialRange = currentDate
-  //   ? {
-  //       from: new Date(currentDate),
-  //       to: new Date(currentDate).setDate(new Date(currentDate).getDate() + 1),
-  //     }
-  //   : null; // формируем объект для date picker чтобы изначально в календаре было отмечено число, которое ввели в форму 'date'
 
   const dispatch = useDispatch();
 
   const handleSelect = (newSelected) => {
-    setSelected(newSelected);
+    if (newSelected) {
+      setSelected(newSelected);
+      const fromValue = moment(newSelected.from).format('DD.MM.YYYY');
+      const toValue = moment(newSelected.to).format('DD.MM.YYYY');
+      setInputValue({ from: fromValue, to: toValue });
+    }
   };
 
   const handleClearDates = () => {
     setSelected(null);
+    setInputValue({ from: '', to: '' });
   };
 
   const handleClose = () => {
     dispatch(setOpen(false));
+  };
+
+  // добавление дат через инпуты
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInputValue((prev) => {
+      const updated = { ...prev, [name]: value };
+
+      const fromMoment = moment(updated.from, 'DD.MM.YYYY', true);
+      const toMoment = moment(updated.to, 'DD.MM.YYYY', true);
+
+      if (fromMoment.isValid() && toMoment.isValid()) {
+        setSelected({ from: fromMoment.toDate(), to: toMoment.toDate() });
+      }
+      return updated;
+    });
   };
 
   const isDateSelected = selected && selected.from && selected.to;
@@ -70,28 +89,6 @@ const DatePicker = () => {
     }
   };
 
-  const Footer = () => {
-    return (
-      <div className={s.footer}>
-        <div className={s.wrapper}>
-          <div className={s.cancel} onClick={handleClose}>
-            Отмена
-          </div>
-          <div className={s.clear} onClick={handleClearDates}>
-            Очистить
-          </div>
-        </div>
-        <div
-          className={s.done}
-          onClick={handleAddItem}
-          disabled={!isDateSelected}
-        >
-          Готово
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className={s.container}>
       <DayPicker
@@ -100,11 +97,20 @@ const DatePicker = () => {
         captionLayout="dropdown"
         defaultMonth={currentDate ? new Date(currentDate) : new Date()}
         // defaultMonth={selected.to ? new Date(selected.to) : new Date()}
-        endMonth={new Date(2039, 9)}
+        endMonth={new Date(2069, 9)}
         selected={selected}
         onSelect={handleSelect}
         showOutsideDays
-        footer={<Footer />}
+        footer={
+          <Footer
+            handleClose={handleClose}
+            handleClearDates={handleClearDates}
+            handleAddItem={handleAddItem}
+            isDateSelected={isDateSelected}
+            inputValue={inputValue}
+            onChange={handleInputChange}
+          />
+        }
       />
     </div>
   );
